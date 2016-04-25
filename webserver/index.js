@@ -1,14 +1,12 @@
 var express = require('express');
 var app = express();
-
-//Get corresponds to the http verb
-//app.get('/', function(req, res) {
-//  res.send('Hello Express\n');
-//});
+var middleware = require('./middleware.js');
 
 var port = 3000;
 
-app.get('/about/', function(req, res) {
+app.use(middleware.logger);
+
+app.get('/about/', middleware.auth, function(req, res) {
   res.send('About us!')
 });
 
