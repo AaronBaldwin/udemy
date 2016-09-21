@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var middleware = require('./middleware.js');
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 app.use(middleware.logger);
 
