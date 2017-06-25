@@ -4,12 +4,14 @@
   "description": "webserver project for udemy",
   "main": "index.js",
   "scripts": {
-    "start":"node ./webserver/index.js",
+    "start": "node ./webserver/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Aaron Baldwin",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.4"
+    "body-parser": "^1.17.2",
+    "express": "^4.13.4",
+    "lodash": "^4.17.4"
   }
 }
